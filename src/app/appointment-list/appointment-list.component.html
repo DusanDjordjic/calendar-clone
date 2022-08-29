@@ -1,0 +1,31 @@
+<div class="rows-wrapper">
+  <div *ngFor="let appByTime of appsByTime$ | async" class="row">
+    <div class="row-time">
+      <span>
+        {{ appByTime.time.hour || 0 }}h {{ appByTime.time.minutes || 0 }}m
+      </span>
+    </div>
+    <div class="row-app">
+      <div
+        class="single-appointment"
+        *ngFor="let app of appByTime.appointments"
+      >
+        <button mat-flat-button class="details" (click)="openDetails(app.id)">
+          <span>{{ app.title }} </span>
+          <span
+            >Ends: {{ app.endTime.hour || 0 }}h
+            {{ app.endTime.minutes || 0 }}m</span
+          >
+          <button
+            mat-icon-button
+            color="warn"
+            class="remove"
+            (click)="removeAppointmentById(app.id)"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<mat-form-field class="form-element">
+  <mat-label> <ng-content></ng-content></mat-label>
+  <mat-select (selectionChange)="onSelect($event)">
+    <mat-option *ngFor="let t of times" [value]="t"
+      >{{ t.hour }}h {{ t.minutes }}m</mat-option
+    >
+  </mat-select>
+</mat-form-field>

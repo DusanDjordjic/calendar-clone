@@ -1,6 +1,11 @@
 <div class="layout">
   <aside>
-    <app-calendar-wrapper></app-calendar-wrapper>
+    <app-calendar-wrapper class="sticky"></app-calendar-wrapper>
   </aside>
-  <div>View</div>
+  <div class="content">
+    <header>
+      <h2>{{ selectedDate$ | async | date: "EEEE, MMMM d" }}</h2>
+    </header>
+    <router-outlet></router-outlet>
+  </div>
 </div>

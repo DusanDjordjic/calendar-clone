@@ -1,6 +1,4 @@
 .dialog__layout {
-  width: 300px;
-
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -8,4 +6,11 @@
 
 .form-element {
   width: 100%;
+}
+.timepickers {
+  display: flex;
+  gap: 1rem;
+  > * {
+    width: 100%;
+  }
 }

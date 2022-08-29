@@ -1,0 +1,34 @@
+:host {
+  width: 100%;
+}
+.rows-wrapper {
+  width: 100%;
+}
+.row {
+  display: flex;
+  gap: 1rem;
+  border: 1px solid #eee;
+  width: 100%;
+  .row-time {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100px;
+    border-right: 1px solid #eee;
+  }
+  .row-app {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+}
+
+.details {
+  border: 1px solid #eee;
+  .remove {
+    margin-left: 0.5rem;
+  }
+}

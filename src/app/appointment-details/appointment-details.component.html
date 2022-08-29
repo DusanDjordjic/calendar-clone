@@ -1,0 +1,24 @@
+<div *ngIf="appointment$ | async as appointment">
+  <h1>{{ appointment.title }}</h1>
+  <p>{{ appointment.date | date: "EEEE, MMMM d" }}</p>
+  <div class="times">
+    <span class="time">
+      <span>Start Date</span>
+      <span
+        >{{ appointment.startTime.hour || 0 }}h
+        {{ appointment.startTime.minutes || 0 }}m</span
+      >
+    </span>
+    <span class="time">
+      <span>End Date</span>
+      <span
+        >{{ appointment.endTime.hour || 0 }}h
+        {{ appointment.endTime.minutes || 0 }}m</span
+      >
+    </span>
+  </div>
+
+  <div>
+    <p>{{ appointment.description }}</p>
+  </div>
+</div>
